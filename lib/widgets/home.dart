@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import '../items/doble_select.dart';
+import 'upper_bar/info.dart';
+import 'upper_bar/buttons_panel.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class WorkPlace extends StatefulWidget {
+  const WorkPlace({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<WorkPlace> createState() => _WorkPlaceState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _WorkPlaceState extends State<WorkPlace> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -22,8 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
-          actions: [DoubleUpperButton()],
+          leading: const Text("image"),
+          title: const UserInfo(),
+          actions: const [ActionsButtons()],
         ),
         body: const Center(child: Text("center")),
         bottomNavigationBar:
